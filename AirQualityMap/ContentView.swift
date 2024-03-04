@@ -6,19 +6,29 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
+    
+    @State var vm = AppViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Map(position: $vm.position) {
+            Marker("My Location", coordinate: vm.currentLocation!)
         }
-        .padding()
+        .mapStyle(.hybrid(elevation: .flat, pointsOfInterest: .all, showsTraffic: false))
+        .mapControls {
+            MapUserLocationButton()
+            MapCompass()
+        }
+        .navigationTitle("Air Quality Map")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
     }
 }
 
 #Preview {
-    ContentView()
+    NavigationStack {
+        ContentView()
+    }
 }

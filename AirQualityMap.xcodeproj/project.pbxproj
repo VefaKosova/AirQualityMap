@@ -11,6 +11,10 @@
 		DCC7EB5A2B950B3500FD170A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7EB592B950B3500FD170A /* ContentView.swift */; };
 		DCC7EB5C2B950B3600FD170A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC7EB5B2B950B3600FD170A /* Assets.xcassets */; };
 		DCC7EB5F2B950B3600FD170A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC7EB5E2B950B3600FD170A /* Preview Assets.xcassets */; };
+		DCC7EB672B950C0A00FD170A /* XCAAQI in Frameworks */ = {isa = PBXBuildFile; productRef = DCC7EB662B950C0A00FD170A /* XCAAQI */; };
+		DCC7EB692B950FE300FD170A /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7EB682B950FE300FD170A /* AppViewModel.swift */; };
+		DCC7EB6B2B95CB8600FD170A /* CoordinatesFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7EB6A2B95CB8600FD170A /* CoordinatesFinder.swift */; };
+		DCC7EB6D2B95D5BD00FD170A /* CircleAQIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7EB6C2B95D5BD00FD170A /* CircleAQIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		DCC7EB592B950B3500FD170A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DCC7EB5B2B950B3600FD170A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCC7EB5E2B950B3600FD170A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DCC7EB682B950FE300FD170A /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		DCC7EB6A2B95CB8600FD170A /* CoordinatesFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesFinder.swift; sourceTree = "<group>"; };
+		DCC7EB6C2B95D5BD00FD170A /* CircleAQIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAQIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC7EB672B950C0A00FD170A /* XCAAQI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,9 @@
 				DCC7EB592B950B3500FD170A /* ContentView.swift */,
 				DCC7EB5B2B950B3600FD170A /* Assets.xcassets */,
 				DCC7EB5D2B950B3600FD170A /* Preview Content */,
+				DCC7EB682B950FE300FD170A /* AppViewModel.swift */,
+				DCC7EB6A2B95CB8600FD170A /* CoordinatesFinder.swift */,
+				DCC7EB6C2B95D5BD00FD170A /* CircleAQIView.swift */,
 			);
 			path = AirQualityMap;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = AirQualityMap;
+			packageProductDependencies = (
+				DCC7EB662B950C0A00FD170A /* XCAAQI */,
+			);
 			productName = AirQualityMap;
 			productReference = DCC7EB542B950B3500FD170A /* AirQualityMap.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = DCC7EB4B2B950B3500FD170A;
+			packageReferences = (
+				DCC7EB652B950C0A00FD170A /* XCRemoteSwiftPackageReference "XCAAQI" */,
+			);
 			productRefGroup = DCC7EB552B950B3500FD170A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC7EB5A2B950B3500FD170A /* ContentView.swift in Sources */,
+				DCC7EB6B2B95CB8600FD170A /* CoordinatesFinder.swift in Sources */,
 				DCC7EB582B950B3500FD170A /* AirQualityMapApp.swift in Sources */,
+				DCC7EB692B950FE300FD170A /* AppViewModel.swift in Sources */,
+				DCC7EB6D2B95D5BD00FD170A /* CircleAQIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCC7EB652B950C0A00FD170A /* XCRemoteSwiftPackageReference "XCAAQI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/XCAAQI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCC7EB662B950C0A00FD170A /* XCAAQI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC7EB652B950C0A00FD170A /* XCRemoteSwiftPackageReference "XCAAQI" */;
+			productName = XCAAQI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCC7EB4C2B950B3500FD170A /* Project object */;
 }
